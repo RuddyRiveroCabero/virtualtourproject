@@ -1,43 +1,129 @@
 body {
-    margin: 0;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    font-family: 'Oswald', 'Roboto', sans-serif;
-    overflow: hidden;
-   } 
- #main{
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     font-size: 1rem;
-     color: white;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-shadow: 1px 1px 7px black, -1px -1px 7px black;    
-     -moz-user-select: none;
-     -webkit-user-select: none;
-     -ms-user-select: none;
-     user-select: none;
-     pointer-events: none;
-     z-index: 100;
-     
-     } 
-     #tooltip{
-       background-color: white;
-       position: absolute;
-       border-radius: 5px;
-      
-       opacity: 0;
-       /* top: 0;
-       left: 0; */
-       transform: translate3d(-50%, -100%, 0);
-       transition: all .3s;
-     } 
-     #tooltip.active{
-      opacity: 1;
-      transform: translate3d(-50%, -170%, 0);
-      padding: 3px;
-     }
-   
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Oswald", "Roboto", sans-serif;
+  overflow: hidden;
+}
+a{
+  color: white;
+}
+#main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* text-shadow: 1px 1px 7px black, -1px -1px 7px black; */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* pointer-events: none; */
+  z-index: 100;
+  /* background-color: chartreuse; */
+}
+#header{
+display:flex;
+margin-top: 10px;
+}
+#toggle-header{
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-right: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#toggle-header .arrow{
+  transform: rotate(-90deg);
+}
+#header-info{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding:0 10px;
+  /* width: 100%; */
+}
+#welcome{
+  display: flex;
+  justify-content: center;
+}
+#footer{
+padding-bottom: 10px;
+}
+#controls{
+  display: flex;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+#toggle-gallery{
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  padding: 0 3px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+#toggle-gallery .arrow{
+transform: rotate(180deg);
+}
+.icon{
+  height: 30px;
+}
+#pano-gallery{
+height: 100px;
+background-color: rgba(0, 0, 0, 0.4);
+display: flex;
+overflow-x: scroll;
+overflow-y: hidden;
+}
+.pano-thumbnail{
+  height: 85%;
+  margin: 7px;
+}
+#branding{
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 0 10px;
+opacity: 0.3;
+}
+/* tooltips in 360 scene */
+#tooltip {
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+
+  opacity: 0;
+  transform: translate3d(-50%, -100%, 0);
+  transition: all 0.3s;
+}
+#tooltip.active {
+  opacity: 1;
+  transform: translate3d(-50%, -170%, 0);
+  padding: 3px;
+}
+
+/* Scroll bar style */
+/* width */
+::-webkit-scrollbar {
+  height: 3px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333; 
+}
