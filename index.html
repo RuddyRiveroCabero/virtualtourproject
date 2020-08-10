@@ -17,26 +17,52 @@
   <body>
     <div id="container"></div>
     <div id="main">
-        
       <div id="header">
-        <div id="toggle-header"><img class="icon arrow"src="images/arrow_up_white.png" alt="arrow"></div>
-        <div id="header-info">
-            <h2 id="title">Ruddy Rivero 360 Portafolio</h2>
-        <p id="more-info">
-          more info:
-          <a href="http://www.ruddyrivero.weebly.com" target="_blank"
-            >www.ruddyrivero.weebly.com</a>
-        </p> 
+        <div id="toggle-header" onclick="toggleHeader()">
+          <img
+            id="arrow-header"
+            class="icon arrow"
+            src="images/arrow_up_white.png"
+            alt="arrow"
+          />
         </div>
-       
+        <div id="header-info">
+          <h2 id="title">Ruddy Rivero 360 Portafolio</h2>
+          <p id="more-info">
+            more info:
+            <a href="http://www.ruddyrivero.weebly.com" target="_blank"
+              >www.ruddyrivero.weebly.com</a
+            >
+          </p>
+        </div>
       </div>
       <div id="welcome">
-        <h1>Tour Virtual 360</h1>
+        <!-- <h1>Tour Virtual 360</h1> -->
       </div>
       <div id="footer">
         <div id="controls">
-          <div id="toggle-gallery">
-            <img class="icon arrow" src="images/arrow_up_white.png" alt="arrow" />
+          <div class="control-div">
+            <div id="toggle-gallery" onclick="toggleGallery()">
+              <img
+                id="arrow-gallery"
+                class="icon arrow"
+                src="images/arrow_up_white.png"
+                alt="arrow"
+              />
+            </div>
+            <img
+              class="icon"
+              src="images/floorplan_white.png"
+              alt="floor plan"
+            />
+          </div>
+          <div class="control-div">
+            <a href="https://wa.me/59175347432?text=Me%20interesa" target="_blank">
+              <img
+              class="icon"
+              src="images/whatsapp_white.png"
+              alt="whatsapp logo"
+            /></a>
             
           </div>
         </div>
@@ -73,7 +99,11 @@
           />
         </div>
         <div id="branding">
-          <img class="icon rr-logo" src="images/ruddyrivero_white.png" alt="" />
+          <img
+            class="icon rr-logo"
+            src="images/ruddyrivero_white.png"
+            alt="double R logo"
+          />
           RUDDY RIVERO 360
         </div>
       </div>

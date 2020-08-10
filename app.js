@@ -265,6 +265,29 @@ document.addEventListener(
   },
   false
 );
+//index onclick functions
+function toggleHeader(){
+  let header = document.getElementById("header-info")
+  let arrowHeader = document.getElementById("arrow-header")
+  if (header.style.display === "none") {
+    header.style.display = "block";
+    arrowHeader.style.transform = "rotate(-90deg)";
+  } else {
+    header.style.display = "none";
+    arrowHeader.style.transform = "rotate(90deg)";
+  }
+}
+function toggleGallery(){
+  let gallery = document.getElementById("pano-gallery")
+  let arrowGallery = document.getElementById("arrow-gallery")
+  if (gallery.style.display === "none") {
+    gallery.style.display = "flex";
+    arrowGallery.style.transform = "rotate(180deg)";
+  } else {
+    gallery.style.display = "none";
+    arrowGallery.style.transform = "rotate(0deg)";
+  }
+}
 
 function update() {
   if (isUserInteracting === false) {
